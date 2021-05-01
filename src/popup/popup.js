@@ -2,72 +2,59 @@ var selectedGame;
 
 chrome.storage.local.get('selectedGame', function(saved) {
     selectedGame = saved.selectedGame;
-    if(selectedGame === undefined)
-    {
+    if(selectedGame === undefined) {
         selectedGame = document.getElementById("gameSelect").value;
     }
     displaySelectedGame();
 });
 
-chrome.storage.local.get('activated', function(saved) {
-    let activated = saved.activated;
-    if(activated === undefined)
-    {
-        displayDeactivated();
-    }
-    else
-    {
-        if(activated)
-        {
-            displayActivated();
-        }
-        else
-        {
-            displayDeactivated();
+chrome.storage.local.get('isActivated', function(saved) {
+    let isActivated = saved.isActivated;
+    if(isActivated === undefined) {
+        displayDeactivatedStatus();
+    } else {
+        if(isActivated) {
+            displayActivatedStatus();
+        } else {
+            displayDeactivatedStatus();
         }
     }
 });
 
-function setGame(game)
-{
+function setSelectedGame(game) {
     chrome.runtime.sendMessage({type: "selectedGame", selectedGame: game});
 }
 
-function activate()
-{
-    chrome.runtime.sendMessage({type: "activation", activation: true});
-    displayActivated();
+function activate() {
+    chrome.runtime.sendMessage({type: "activation", isActivated: true});
+    displayActivatedStatus();
 }
 
-function displayActivated()
-{
+function displayActivatedStatus() {
     document.getElementById("status").innerHTML = "Active";
     document.getElementById("status").className = "activeStatus";
     document.getElementById("activateButton").className = "hiddenStatus";
     document.getElementById("deactivateButton").className = "visibleStatus";
 }
 
-function deactivate()
-{
-    chrome.runtime.sendMessage({type: "activation", activation: false});
-    displayDeactivated();
+function deactivate() {
+    chrome.runtime.sendMessage({type: "activation", isActivated: false});
+    displayDeactivatedStatus();
 }
 
-function displayDeactivated()
-{
+function displayDeactivatedStatus() {
     document.getElementById("status").innerHTML = "Inactive";
     document.getElementById("status").className = "inactiveStatus";
     document.getElementById("deactivateButton").className = "hiddenStatus";
     document.getElementById("activateButton").className = "visibleStatus";
 }
 
-function displaySelectedGame()
-{
+function displaySelectedGame() {
     document.getElementById("gameSelect").value = selectedGame;
 }
 
 document.getElementById("gameSelect").addEventListener("change", function() {
-    setGame(this.value);
+    setSelectedGame(this.value);
 });
 
 document.getElementById("activateButton").addEventListener("click", function() {

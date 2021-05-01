@@ -6,33 +6,30 @@ const joinButtonElementID = "button-join";
 const rightArrowDefinition = "{rightarrow}";
 const backspaceDefinition = "{backspace}";
 
-function getRightArrows(count)
-{
+function getRightArrows(count) {
     var rightarrows = "";
-    for(var i = 0; i < count; i++)
-    {
+    for(var i = 0; i < count; i++) {
         rightarrows += rightArrowDefinition;
     }
     return rightarrows;
 }
 
-function getBackspaces(count)
-{
+function getBackspaces(count) {
     var backspaces = "";
-    for(var i = 0; i < count; i++)
-    {
+    for(var i = 0; i < count; i++) {
         backspaces += backspaceDefinition;
     }
     return backspaces;
 }
 
-chrome.runtime.onMessage.addListener(
+chrome.runtime.onMessage.addListener (
     function(request) {
-        switch(request.type)
-        {
+        switch(request.type) {
             case "roomCode":
-                $("#" + roomCodeElementID).sendkeys(getRightArrows(20) + getBackspaces(20) + request.roomCode);
-                document.getElementById(joinButtonElementID).click();
+                if(request.roomCode.length == 4) {
+                    $("#" + roomCodeElementID).sendkeys(getRightArrows(20) + getBackspaces(20) + request.roomCode);
+                    document.getElementById(joinButtonElementID).click();
+                }
                 break;
         }
     }

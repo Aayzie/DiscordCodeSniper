@@ -89,7 +89,6 @@ function sendLatestMessage()
             {
                 try
                 {
-                    console.log("latest mse: " + _latestMessage + ", " + selectedLink);
                     chrome.tabs.sendMessage(tabs[i].id, {type: "roomCode", roomCode: _latestMessage});
                     break;
                 }

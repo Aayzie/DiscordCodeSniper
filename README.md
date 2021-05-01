@@ -1,4 +1,4 @@
-# DiscordCodeGetter
+# Discord Code Getter
  Automatically join a Jackbox/WTD room using a code from Discord
  
 ![FibbageGetterDemo](https://user-images.githubusercontent.com/16715946/116795803-1bd68b80-ab0a-11eb-8817-d78b193e912f.gif)
@@ -15,20 +15,24 @@
 
 5. Select the folder you just extracted.
 
+6. Pin the extension in your **Extensions Toolbar** then click its icon to open up the menu.
+
+![image](https://user-images.githubusercontent.com/16715946/116795936-19c0fc80-ab0b-11eb-922c-4cdbe8c309c7.png)
+
 ## Usage
 
 - Use the **Game dropdown** to pick the game that forsen is playing, then click **Activate**.
 
-- Go to [jackbox.lol](jackbox.lol) or [playwtd.com](playwtd.com), then open the **web-version of Discord** *(this doesn't work in the standalone app)*.
+- Go to [jackbox.lol](jackbox.lol) or [playwtd.com](playwtd.com), then open the **web-version of Discord** *(this doesn't work for the standalone app)*.
 
-- If you already opened those pages before installing the extension, make sure to refresh them first (otherwise the extension won't detect them).
+- If you already opened those pages (both the game site and Discord) before installing the extension, make sure to refresh them first (otherwise the extension won't detect them).
 
-- Go to the text channel where you're gonna get the code from.
+- Go to the Discord text channel where you're gonna get the code from. (**#forsen** under **EVENTS**)
 
 - The next message to be posted in that text channel will be automatically put into the game site's roomcode input field, and then the Join/Play button will be automatically "pressed" immediately after.
 In other words, **you don't have to do anything**. *(Just make sure to test it first before forsen starts the game, just to make sure it works.)*
 
-- Remember to **Deactivate** when you're not using it anymore (otherwise the extension will keep checking for new messages).
+- Remember to press **Deactivate** when you're not using it anymore (otherwise the extension will keep checking for new messages).
 
 # More Demos
 

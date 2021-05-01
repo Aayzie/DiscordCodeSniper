@@ -1,0 +1,30 @@
+.section
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#status
+{
+    margin-left: 3  px;
+}
+
+.activeStatus
+{
+    color: green;
+}
+
+.inactiveStatus
+{
+    color: darkred;
+}
+
+.visibleStatus
+{
+    display: block;
+}
+
+.hiddenStatus
+{
+    display: none;
+}

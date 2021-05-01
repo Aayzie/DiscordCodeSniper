@@ -1,0 +1,64 @@
+{
+  "name": "Discord Code Getter",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "description": "Automatically join a Jackbox/WTD room using a code from Discord.",
+  "homepage_url": "https://github.com/Aayzie",
+  "icons":
+  {
+    "128": "assets/icon.png"
+  },
+  "background":
+  {
+    "scripts": ["src/background.js"],
+    "persistent": true
+  },
+  "permissions":
+  [
+    "tabs",
+    "webNavigation",
+    "<all_urls>",
+    "storage"
+  ],
+  "browser_action":
+  {
+    "default_icon": "assets/icon.png",
+    "default_title": "Popup",
+    "default_popup": "src/popup/popup.html"
+  },
+  "content_scripts":
+  [
+    {
+      "matches":
+      [
+        "https://discord.com/*"
+      ],
+      "js":
+      [
+        "src/contents/discordContent.js"
+      ]
+    },
+    {
+      "matches":
+      [
+        "https://jackbox.lol/*"
+      ],
+      "js":
+      [
+        "src/lib/jquery-3.6.0.min.js", "src/lib/bililiteRange.js", "src/lib/jquery.sendkeys.js",
+        "src/contents/jackboxContent.js"
+      ]
+    },
+    {
+      "matches":
+      [
+        "https://playwtd.com/*"
+      ],
+      "js":
+      [
+        "src/lib/jquery-3.6.0.min.js", "src/lib/bililiteRange.js", "src/lib/jquery.sendkeys.js",
+        "src/contents/wtdContent.js"
+      ]
+    }
+  ]
+}

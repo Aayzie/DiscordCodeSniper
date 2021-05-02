@@ -21,7 +21,7 @@
   "browser_action":
   {
     "default_icon": "assets/icon.png",
-    "default_title": "Popup",
+    "default_title": "Discord Code Sniper",
     "default_popup": "src/popup/popup.html"
   },
   "content_scripts":

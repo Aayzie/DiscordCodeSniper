@@ -36,13 +36,13 @@ In other words, **you don't have to do anything**. *(Just make sure to test it f
 
 - Remember to press **Deactivate** when you're not using it anymore (otherwise the extension will keep checking for new messages).
 
-# Libraries Used
+## Libraries Used
 
 [featurist/jquery-sendkeys](https://github.com/featurist/jquery-sendkeys) (the roomcode input field for Jackbox/WTD is weird where you can't just modify the element's value to put the code in, which is why I had to use this.)
 
 [dwachss/bililiteRange](https://github.com/dwachss/bililiteRange) (required by jquery-sendkeys)
 
-# More Demos
+## More Demos
 
 ![JackboxGetterDemo](https://user-images.githubusercontent.com/16715946/116795805-1d07b880-ab0a-11eb-9060-5a1f46737385.gif)
 ![WTDGetterDemo](https://user-images.githubusercontent.com/16715946/116795807-1e38e580-ab0a-11eb-93f8-145940302bed.gif)

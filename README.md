@@ -1,5 +1,7 @@
-# Discord Code Getter
+# Discord Code Sniper
  Automatically join a Jackbox/WTD room using a code from Discord
+ 
+ *thanks to mozeralla for the new name suggestion XD*
  
 ![FibbageGetterDemo](https://user-images.githubusercontent.com/16715946/116795803-1bd68b80-ab0a-11eb-8817-d78b193e912f.gif)
 

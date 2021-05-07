@@ -1,5 +1,5 @@
 # Discord Code Sniper
- Automatically join a Jackbox/WTD room using a code from Discord
+ Automatically join a Jackbox/WTD room with a code from Discord immediately after it's posted.
  
  *thanks to mozeralla for the new name suggestion XD*
  

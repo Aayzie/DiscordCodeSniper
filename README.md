@@ -1,3 +1,7 @@
+# this doesnt work anymore and i don't feel like updating it because forsen doesn't play jackbox that much anymore
+# maybe if someone donates, idk let's say, $200..., then maybe..
+
+
 # Discord Code Sniper
  Automatically join a Jackbox/WTD room with a code from Discord immediately after it's posted.
  

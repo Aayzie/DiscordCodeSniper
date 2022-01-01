@@ -1,4 +1,4 @@
-# this doesnt work anymore and i don't feel like updating it because forsen doesn't play jackbox that much anymore
+# this doesnt work anymore **properly** and i don't feel like updating it because forsen doesn't play jackbox that much anymore (there is a workaround however)
 # maybe if someone donates, idk let's say, $200..., then maybe..
 
 

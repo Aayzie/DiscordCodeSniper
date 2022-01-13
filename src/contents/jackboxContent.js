@@ -23,12 +23,27 @@ function getBackspaces(count) {
 }
 
 chrome.runtime.onMessage.addListener (
-    function(request) {
+    async function(request) {
         switch(request.type) {
             case "roomCode":
-                if(request.roomCode.length == 4) {
-                    $("#" + roomCodeElementID).sendkeys(getRightArrows(20) + getBackspaces(20) + request.roomCode);
-                    document.getElementById(joinButtonElementID).click();
+                var codes = request.roomCode.split(/[ ,]+/);
+                console.log("JOINING a " + roomCodeElementID);
+                for(var i = 0; i < codes.length; i++)
+                {
+                    if(codes[i].length == 4) {
+                        console.log("JOINING b " + roomCodeElementID);
+                        $("#" + roomCodeElementID).sendkeys(getRightArrows(20) + getBackspaces(20) + request.roomCode);
+                        
+                        for(var j = 0; j < 1000; j++)
+                        {
+                            console.log("JOINING c " + roomCodeElementID + "_" + request.roomCode);
+                            let sleep = ms => new Promise(resolve => setTimeout(resolve, 100));
+                            document.getElementById(joinButtonElementID).click();
+                            console.log("j: " + j);
+                            await sleep(1);
+                        }
+                        let sleep3 = ms => new Promise(resolve => setTimeout(resolve, 100));
+                    }
                 }
                 break;
         }

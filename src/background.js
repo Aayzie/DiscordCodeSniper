@@ -70,7 +70,33 @@ function setSelectedGame(game) {
 }
 
 function sendLatestMessage() {
-    chrome.tabs.getAllInWindow(null, function(tabs) {
+    chrome.windows.getAll({populate:true},function(windows){
+        windows.forEach(function(window){
+            window.tabs.forEach(function(tab){
+                //collect all of the urls here, I will just log them instead
+                console.log(tab.url);
+                let selectedLink = "";
+                switch(_selectedGame) {
+                    case "jackbox":
+                        selectedLink = JackboxLink;
+                        break;
+                    case "wtd":
+                        selectedLink = WtdLink;
+                        break;
+                }
+                if(selectedLink != "" && tab.url.includes(selectedLink)) {
+                    try {
+                        chrome.tabs.sendMessage(tab.id, {type: "roomCode", roomCode: _latestMessage});
+                    } catch (errorMessage) {
+                        console.log("An error has occured: " + errorMessage);
+                    }
+                }
+            });
+        });
+    });
+
+    /*
+    chrome.tabs.query(null, function(tabs) {
         for (var i = 0; i < tabs.length; i++) {
             let selectedLink = "";
             switch(_selectedGame) {
@@ -84,11 +110,11 @@ function sendLatestMessage() {
             if(selectedLink != "" && tabs[i].url.includes(selectedLink)) {
                 try {
                     chrome.tabs.sendMessage(tabs[i].id, {type: "roomCode", roomCode: _latestMessage});
-                    break;
                 } catch (errorMessage) {
                     console.log("An error has occured: " + errorMessage);
                 }
             }
         }
     });
+    */
 }

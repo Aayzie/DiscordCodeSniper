@@ -1,10 +1,5 @@
-# THIS WORKS AGAIN. I was able to snipe forsen with this yesterday and I even almost won EZY . o O ( PepeHands )
-# Try using 2 different windows, one for the web Discord tab, the other for the jackbox.tv tab, so you can see both at the same time
-
-
-# this doesnt work anymore **properly** and i don't feel like updating it because forsen doesn't play jackbox that much anymore (there is a workaround however)
-# maybe if someone donates, idk let's say, $200..., then maybe..
-
+## THIS WORKS AGAIN. I was able to snipe forsen with this yesterday and I even almost won EZY . o O ( PepeHands )
+## Try using 2 different windows, one for the web Discord tab, the other for the jackbox.tv tab, so you can see both at the same time
 
 # Discord Code Sniper
  Automatically join a Jackbox/WTD room with a code from Discord immediately after it's posted.

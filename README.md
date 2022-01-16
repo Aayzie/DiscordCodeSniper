@@ -1,4 +1,4 @@
-# THIS WORKS AGAIN. I was able to snipe forsen yesterday with this and I almost won even EZY
+# THIS WORKS AGAIN. I was able to snipe forsen with this yesterday and I even almost won EZY . o O ( PepeHands )
 # Try using 2 different windows, one for the web Discord tab, the other for the jackbox.tv tab, so you can see both at the same time
 
 

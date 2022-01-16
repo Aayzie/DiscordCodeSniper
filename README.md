@@ -1,3 +1,7 @@
+# THIS WORKS AGAIN. I was able to snipe forsen yesterday with this and I almost won even EZY
+# Try using 2 different windows, one for the web Discord tab, the other for the jackbox.tv tab, so you can see both at the same time
+
+
 # this doesnt work anymore **properly** and i don't feel like updating it because forsen doesn't play jackbox that much anymore (there is a workaround however)
 # maybe if someone donates, idk let's say, $200..., then maybe..
 
